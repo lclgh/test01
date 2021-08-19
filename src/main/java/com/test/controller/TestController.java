@@ -50,4 +50,9 @@ public class TestController {
     public String test7(@RequestParam("userId") String abc, @RequestParam("abcdef") String passwd){
         return "hello param22 get!" + abc + " : " + passwd;
     }
+
+    @GetMapping("/geterror")
+    public String test8() throws  Exception{
+        throw new Exception("test error");
+    }
 }
